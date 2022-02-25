@@ -1,0 +1,464 @@
+{
+	"info": {
+		"_postman_id": "6fe6418e-669c-4780-ba27-7d512a6c1cef",
+		"name": "control-expenses-api",
+		"description": "An API that is a manager spent",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Expense",
+			"item": [
+				{
+					"name": "FindByIdExpenses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/expenses/2",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"expenses",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateExpenses",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"internets 1\",\n    \"value\": \"99.340\",\n    \"date\": \"10/12/2032\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/expenses/5",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"expenses",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SaveExpenses",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"mercado 3\",\n    \"value\": \"140.90\",\n    \"category\": \"moradia\",\n    \"date\": \"04/03/2021\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/expenses",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"expenses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchByExpenses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/expenses/search?description=mercado 12",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"expenses",
+								"search"
+							],
+							"query": [
+								{
+									"key": "description",
+									"value": "mercado 12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindAllExpenses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/expenses",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"expenses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteExpenses",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/expenses/4",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"expenses",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Expense manager all endpoints use authorization.",
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQ1ODA4NDMxLCJleHAiOjE2NDU4OTQ4MzF9.OppkYRZDhQb6JxUduLM2AnXZTQOr0D9plJGvZGUPY14",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Income",
+			"item": [
+				{
+					"name": "SaveIncomes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"salario 2\",\n    \"value\": \"3.000\",\n    \"date\": \"04/03/2019\",\n    \"id\": 9\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/incomes",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"incomes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateIncomes",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"salario Jana\",\n    \"value\": \"1.790\",\n    \"date\": \"04/02/2022\",\n    \"id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/incomes/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"incomes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindAllIncomes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/incomes",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"incomes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindByIdIncomes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/incomes/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"incomes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteIncomes",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/incomes/2",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"incomes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchByIncomes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/incomes/search",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"incomes",
+								"search"
+							],
+							"query": [
+								{
+									"key": "month",
+									"value": "03",
+									"disabled": true
+								},
+								{
+									"key": "year",
+									"value": "2019",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "jana",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQ1ODA4NDMxLCJleHAiOjE2NDU4OTQ4MzF9.OppkYRZDhQb6JxUduLM2AnXZTQOr0D9plJGvZGUPY14",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "SaveUsers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test\",\n    \"email\": \"teste@teste.com\",\n    \"password\": \"Test1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/users",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindByIdUsers",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/users/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccessTokenUsers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"teste@teste.com\",\r\n    \"password\": \"Test1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/users/accessToken",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"accessToken"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:3000/api/v1",
+			"type": "default"
+		}
+	]
+}

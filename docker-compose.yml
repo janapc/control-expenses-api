@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  app:
+    container_name: app
+    build: .
+    volumes:
+      - .:/usr/app
+    ports:
+      - "3000:3000"
+
+  database:
+    image: "postgres:latest"
+    container_name: database
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres123
+      - POSTGRES_DB=control_expenses
+    volumes:
+      - data:/var/lib/postgresql/data
+
+volumes:
+  data: {}
